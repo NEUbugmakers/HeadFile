@@ -7,7 +7,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define STACK_DEFAULT_CAPACITY 10
+#define STACK_DEFAULT_CAPACITY 4
 typedef struct {
     int *num;
     int size;
