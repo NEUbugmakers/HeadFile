@@ -15,7 +15,7 @@ void expand(Stack *s) {//扩容
         return;
     int *old = s->num;
     s->num = (int *) malloc(sizeof(int) * (s->capacity << 1));
-    memcpy(s->num, old, sizeof(s->size));
+    memcpy(s->num, old, sizeof(int)*s->size);
     s->capacity <<= 1;
     free(old);
 }
@@ -25,7 +25,7 @@ void shrink(Stack *s) {//缩容
         return;
     int *old = s->num;
     s->num = (int *) malloc(sizeof(int) * (s->capacity >> 1));
-    memcpy(s->num, old, sizeof(s->size));
+    memcpy(s->num, old, sizeof(int)*s->size);
     s->capacity >>= 1;
     free(old);
 }
